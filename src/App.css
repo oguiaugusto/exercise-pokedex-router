@@ -1,3 +1,45 @@
 .App {
   text-align: center;
 }
+
+.pokemon-details {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.pokemon-details .pokemon-img {
+  width: 10%;
+}
+
+.pokemon-details .pokemon-info {
+  margin: 0;
+}
+
+.pokemon-details .pokemon-info span {
+  font-size: xx-large;
+}
+
+.pokemon-details .pokemon-more-info a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.pokemon-details .pokemon-maps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+}
+
+.pokemon-details .pokemon-maps .pokemon-map {
+  margin: 1rem 3rem;
+}
+
+.pokemon-maps .pokemon-map p {
+  text-align: center;
+}
+
+.pokemon-maps .pokemon-map img {
+  width: 250px;
+}
