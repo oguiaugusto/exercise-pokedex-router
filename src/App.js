@@ -6,6 +6,7 @@ import Pokedex from './components/Pokedex';
 import PokemonDetails from './components/PokemonDetails';
 import NavBar from './components/NavBar';
 import About from './components/About';
+import NotFound from './components/NotFound';
 
 class App extends React.Component {
   render() {
@@ -26,6 +27,7 @@ class App extends React.Component {
             }
           />
           <Route path="/about" component={ About } />
+          <Route path="*" component={ NotFound } />
         </Switch>
       </BrowserRouter>
     );

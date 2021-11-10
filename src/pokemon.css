@@ -8,3 +8,14 @@
   border: 1px gray solid;
   border-radius: 10px;
 }
+
+.pokemon a {
+  position: relative;
+}
+
+.pokemon-img-more-info {
+  font-size: x-small;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}

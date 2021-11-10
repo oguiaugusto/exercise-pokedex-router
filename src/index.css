@@ -23,3 +23,7 @@ body {
   flex-wrap: wrap;
   margin: 10px 10px;
 }
+
+.not-found {
+  text-align: center;
+}
