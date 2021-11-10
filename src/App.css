@@ -2,6 +2,36 @@
   text-align: center;
 }
 
+.nav-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 15%;
+  margin-top: 0rem;
+  background-color: #cccccc;
+  padding: 1.5rem 1rem;
+}
+
+.nav-bar ul li {
+  list-style-type: none;
+}
+
+.nav-bar ul li:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
 .pokemon-details {
   display: flex;
   flex-flow: column wrap;
