@@ -8,6 +8,7 @@ class NavBar extends React.Component {
         <ul>
           <li><Link to="/">Pokédex</ Link></li>
           <li><Link to="/about">About</ Link></li>
+          <li><Link to="/favorite-pokemons">Favorite Pokemons</ Link></li>
         </ul>
       </nav>
     );

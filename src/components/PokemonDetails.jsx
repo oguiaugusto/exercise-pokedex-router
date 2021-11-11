@@ -2,8 +2,50 @@ import React, { Component } from 'react';
 import pokemons from '../data';
 
 class PokemonDetails extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      favorited: false,
+    }
+
+    this.checkFavorite = this.checkFavorite.bind(this);
+    this.favorite = this.favorite.bind(this);
+  }
+
+  componentDidMount() {
+    const { favoritePokemons } = this.props;
+    const { id } = this.props.match.params;
+
+    if (favoritePokemons.includes(id)) {
+      this.favorite();
+    }
+  }
+
+  favorite() {
+    this.setState({
+      favorited: true,
+    })
+  }
+
+  checkFavorite() {
+    const { addFavoritePokemon, removeFavoritePokemon } = this.props;
+    const { favorited } = this.state;
+    const { id } = this.props.match.params;
+    
+    if (!favorited) {
+      addFavoritePokemon(id);
+      this.setState({ favorited: true });
+    } else {
+      removeFavoritePokemon(id);
+      this.setState({ favorited: false });
+    }
+  }
+
   render() {
     const { id } = this.props.match.params;
+    const { favorited } = this.state;
+    const { checkFavorite } = this;
 
     const pokemon = pokemons.find((poke) => poke.id === parseInt(id));
     const {
@@ -14,6 +56,9 @@ class PokemonDetails extends Component {
       moreInfo,
       foundAt,
     } = pokemon;
+
+    const addFavorite = <button type="button" onClick={ checkFavorite }>Add To Favorite</button>
+    const rmFavorite = <button type="button" onClick={ checkFavorite }>Remove from Favorite</button>
 
     return (
       <div className="pokemon-details">
@@ -48,6 +93,9 @@ class PokemonDetails extends Component {
               </div>
             );
           })}
+        </div>
+        <div className="pokemon-favorite-check">
+          {favorited ? rmFavorite : addFavorite}
         </div>
       </div>
     );

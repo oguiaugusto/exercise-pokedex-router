@@ -12,7 +12,7 @@
 .nav-bar ul {
   display: flex;
   justify-content: space-evenly;
-  width: 15%;
+  width: 30%;
   margin-top: 0rem;
   background-color: #cccccc;
   padding: 1.5rem 1rem;
@@ -36,6 +36,7 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .pokemon-details .pokemon-img {
@@ -72,4 +73,18 @@
 
 .pokemon-maps .pokemon-map img {
   width: 250px;
+}
+
+.favorite-pokemons {
+  width: 80%;
+  margin: auto;
+}
+
+.favorite-pokemons h1 {
+  text-align: center;
+}
+
+.favorite-pokemons .favorite-pokemons-container {
+  display: flex;
+  flex-wrap: wrap;
 }

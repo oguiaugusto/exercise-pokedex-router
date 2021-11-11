@@ -5,8 +5,13 @@ import '../pokemon.css';
 class Pokemon extends React.Component {
   render() {
     const {name, type, averageWeight, image, id} = this.props.pokemon;
+    const { favoritePokemons } = this.props;
+    let backgroundClass = 'pokemon';
+
+    if (favoritePokemons && favoritePokemons.includes(id.toString())) backgroundClass = 'pokemon favorite';
+
     return (
-      <div className="pokemon">
+      <div className={ backgroundClass }>
         <div>
           <p>{name}</p>
           <p>{type}</p>
