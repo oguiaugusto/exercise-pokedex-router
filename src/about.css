@@ -1,0 +1,11 @@
+.pokedex-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokedex-about-section {
+  width: 50%;
+  text-align: justify;
+  line-height: 1.8rem;
+}
